@@ -1,7 +1,7 @@
-import time
-
 import streamlit as st
-
+def main():
+    status_area = st.empty()
+    
 st.title('問題発見と解決テストサイト')
 import pandas as pd
 
