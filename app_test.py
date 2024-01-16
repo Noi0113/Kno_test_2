@@ -14,7 +14,7 @@ if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
 
 #ボタン
-st.button('新規作成',help='作成中のため機能無')
+st.button('新規作成',use_container_width=True)
 st.button('対戦表の確認',help='作成中のため機能無')
 
 
