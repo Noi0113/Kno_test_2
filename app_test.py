@@ -2,6 +2,7 @@ import time
 
 import streamlit as st
 
+st.title('問題発見と解決テストサイト')
 
 def main():
     status_area = st.empty()
