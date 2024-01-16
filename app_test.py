@@ -13,7 +13,7 @@ if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
 
 #ボタン
-st.sidebar.button('新規作成',use_container_width=True,on_click=new)
+st.sidebar.button('新規作成',use_container_width=True)
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 
 if __name__ == '__main__':
