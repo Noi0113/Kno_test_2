@@ -2,7 +2,7 @@ import time
 
 import streamlit as st
 
-st.title('問題発見と解決テストサイト')
+st.title('問題発見と解決テストサイト②')
 import pandas as pd
 
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
