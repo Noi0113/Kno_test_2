@@ -1,6 +1,5 @@
 import streamlit as st
 
-#######トップページ
 def main():
     status_area = st.empty()
 #タイトル
@@ -16,13 +15,6 @@ if uploaded_file is not None:
 st.button('新規作成',use_container_width=True)
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 
-
-#######トップページ終わり
-
-#######新規作成クリック後のページ
-def new():
-    st.sidebar.title("ページが切り替わりました")
-    st.markdown("## 次のページです")
-
 if __name__ == '__main__':
     main()
+
