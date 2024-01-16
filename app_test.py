@@ -3,6 +3,7 @@ import time
 import streamlit as st
 
 st.title('問題発見と解決テストサイト')
+name = st.text_input('名前を入力')
 
 def main():
     status_area = st.empty()
