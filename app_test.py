@@ -9,9 +9,13 @@ st.title('問題発見と解決テストサイト')
 
 #CSVファイルをアップロード(とりあえず)
 import pandas as pd
-uploaded_file = st.file_uploader("CSVファイルを選択してください(まだファイルアップロードする場所を作っただけで、アップロードしても何も起こらないです)", type="csv")
+uploaded_file = st.file_uploader("CSVファイルを選択してください//(まだファイルアップロードする場所を作っただけで、アップロードしても何も起こらないです。今後最適化を実験するときのために使えるかも)", type="csv")
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
+
+#ボタン
+st.button('新規作成')
+st.button('対戦表の確認')
 
 
 #ここから下は編集しない
