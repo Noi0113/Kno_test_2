@@ -25,3 +25,5 @@ if __name__ == '__main__':
 def new():
     st.sidebar.title("ページが切り替わりました")
     st.markdown("## 次のページです")
+if __name__ == '__new__':
+    new()
