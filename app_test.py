@@ -14,7 +14,7 @@ if uploaded_file is not None:
 
 #ボタン
 st.sidebar.button('新規作成',use_container_width=True,on_click=new)
-st.button('対戦表の確認',use_container_width=True)
+st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 
 if __name__ == '__main__':
     main()
