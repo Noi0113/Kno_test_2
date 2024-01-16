@@ -13,7 +13,7 @@ if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
 
 #ボタン
-st.button('新規作成',use_container_width=True,on_click=new)
+st.sidebar.button('新規作成',use_container_width=True,on_click=new)
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 
 
@@ -23,7 +23,6 @@ st.button('対戦表の確認',use_container_width=True,help='ページ準備中
 def new():
     st.sidebar.title("ページが切り替わりました")
     st.markdown("## 次のページです")
-if __name__ == '__new__':
-    new()
+
 if __name__ == '__main__':
     main()
