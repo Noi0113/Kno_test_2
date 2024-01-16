@@ -3,7 +3,12 @@ import time
 import streamlit as st
 
 st.title('問題発見と解決テストサイト')
-name = st.text_input('名前を入力','　')
+import pandas as pd
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+if uploaded_file is not None:
+    data = pd.read_csv(uploaded_file)
+
 
 def main():
     status_area = st.empty()
