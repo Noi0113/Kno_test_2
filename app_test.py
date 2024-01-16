@@ -15,7 +15,9 @@ if uploaded_file is not None:
 
 #ボタン
 st.button('新規作成',use_container_width=True)
-st.button('対戦表の確認',help='作成中のため機能無')
+st.button('対戦表の確認',use_container_width=True)
+
+
 
 
 #ここから下は編集しない
