@@ -16,8 +16,6 @@ if uploaded_file is not None:
 st.button('新規作成',use_container_width=True)
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 
-if __name__ == '__main__':
-    main()
 
 #######トップページ終わり
 
@@ -27,3 +25,5 @@ def new():
     st.markdown("## 次のページです")
 if __name__ == '__new__':
     new()
+if __name__ == '__main__':
+    main()
