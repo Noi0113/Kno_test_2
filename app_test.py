@@ -1,23 +1,25 @@
-import time
-
 import streamlit as st
 
-
+#######トップページ
 def main():
     status_area = st.empty()
+#タイトル
+st.title('問題発見と解決テストサイト') 
 
-    # カウントダウン
-    count_down_sec = 5
-    for i in range(count_down_sec):
-        # プレースホルダーに残り秒数を書き込む
-        status_area.write(f'{count_down_sec - i} sec left')
-        # スリープ処理を入れる
-        time.sleep(1)
+#ボタン
+st.button('新規作成',use_container_width=True)
+st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 
-    # 完了したときの表示
-    status_area.write('Done!')
-    # 風船飛ばす
-    st.balloons()
+
+#######トップページ終わり
+
+#######新規作成クリック後のページ
+def new():
+    st.sidebar.title("ページが切り替わりました")
+    st.markdown("## 次のページです")
+
+if __name__ == '__main__':
+    main()
 
 
 if __name__ == '__main__':
