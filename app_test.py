@@ -19,8 +19,7 @@ st.button('送信')
 
 ##csvファイルをつくる
 with open('data25_2.csv', 'w', newline='') as csvfile:
-          writer = csv.writer(csvfile)
-
+          
 ##csvファイルの出力##
 st.write(data25_2)
 
