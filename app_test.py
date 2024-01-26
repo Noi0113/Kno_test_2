@@ -16,7 +16,6 @@ st.title('問題発見と解決テストサイト')
 st.link_button('新規作成',"https://monketsu-test-new-page.streamlit.app/",use_container_width=True)
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 
-#####ichiryuRina#######
 
 #######トップページ終わり
 
