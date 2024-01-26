@@ -18,9 +18,9 @@ st.button('対戦表の確認',use_container_width=True,help='ページ準備中
 st.button('送信')
 
 ##csvファイルをつくる
-with open('data25_2.csv', 'w', newline='') as csvfile:        
+with open('data25_2.csv', 'w', newline='')       
 ##csvファイルの出力##
-    st.write(data25_2)
+st.write(data25_2)
 
 #######トップページ終わり
 
