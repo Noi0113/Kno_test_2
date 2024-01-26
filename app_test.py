@@ -17,11 +17,6 @@ st.link_button('新規作成',"https://monketsu-test-new-page.streamlit.app/",us
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 st.button('送信')
 
-##csvファイルをつくる
-with open('data25_2.csv', 'w', newline='')       
-##csvファイルの出力##
-st.write(data25_2)
-
 #######トップページ終わり
 
 #######新規作成クリック後のページ
