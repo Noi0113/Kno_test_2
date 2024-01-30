@@ -6,7 +6,7 @@ import sqlite3
 import hashlib
 import pandas as pd
 
-#ここからログイン機能について
+#ここからログイン機能について必要な定義
 def create_user():
     c.execute('CREATE TABLE IF NOT EXISTS userstable (username TEXT PRIMARY KEY, password TEXT)')
 
@@ -39,6 +39,7 @@ def check_hashes(password,hashed_text):
 	return False
 #ここまでログイン機能について
 
+#ここからサイトの構造
 def main():
     status_area = st.empty()
 #タイトル
