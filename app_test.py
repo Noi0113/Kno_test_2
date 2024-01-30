@@ -20,7 +20,7 @@ def add_user(username, password):
     else:
         c.execute('INSERT INTO userstable (username, password) VALUES (?, ?)', (username, password))
         conn.commit()
-	return False
+		return False
 
 def login_user(username, password):
     c.execute('SELECT * FROM userstable WHERE username = ? AND password = ?', (username, password))
