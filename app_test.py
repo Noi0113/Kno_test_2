@@ -5,12 +5,11 @@ import streamlit as st
 import sqlite3
 import hashlib
 import pandas as pd
-import pulp
 
 def main():
     status_area = st.empty()
 #タイトル
-st.title('問題発見と解決テストサイト') 
+st.title('問題発見と解決テストサイト　ログインページにしたい') 
 
 #CSVファイル読み込み
 #import pandas as pd
