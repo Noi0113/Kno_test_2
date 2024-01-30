@@ -55,7 +55,7 @@ elif choice == "ログイン":
 		result = login_user(username, check_hashes(password, hashed_pswd))
 		if result:
 			st.success("{}さんでログインしました".format(username))
-    		else:
+		else:
 	    		st.warning("ユーザー名かパスワードが間違っています")
 
 elif choice == "サインアップ":
