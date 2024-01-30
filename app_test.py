@@ -64,7 +64,8 @@ st.button('送信')
 # ページの選択と表示
 menu1 = ["大会ログイン", "新規大会登録" ]
 choice1 = st.selectbox("選択してください",menu1)
-st.write(choice1)
+st.write("{}ページです".format(choice1))
+
 
 
 menu = ["ホーム", "大会ログイン", "新規大会登録"]
