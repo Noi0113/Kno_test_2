@@ -22,8 +22,24 @@ st.link_button('新規作成',"https://monketsu-2ndpage.streamlit.app/",use_cont
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 st.button('送信')
 
-#ログインについて
-#st.link_button()
+##ログインについて
+#st.link_button()を導入したい
+
+#sqliteに接続
+conn = sqlite3.connect('user_database.db')
+c=conn.cursor()
+
+#パスワードのハッシュ化
+def make_hashes(password):
+	return hashlib.sha256(str.encode(password)).hexdigest()
+
+def check_hashes(password,hashed_text):
+	if make_hashes(password) == hashed_text:
+		return hashed_text
+	return False
+
+#機能の追加
+
 
 
 
