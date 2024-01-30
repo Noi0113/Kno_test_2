@@ -74,7 +74,7 @@ elif choice == "ログイン":
 		hashed_pswd = make_hashes(password)
 		result = login_user(username, check_hashes(password, hashed_pswd))
 		if result:
-			st.success("{}大会でログインしました".format(username))
+			st.success("大会名：{}でログインしました".format(username))
 		else:
 	    		st.warning("大会名か大会パスワードが間違っています")
 
