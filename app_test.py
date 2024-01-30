@@ -60,7 +60,7 @@ st.button('送信')
 
 #機能の追加
 
-menu = ["ホーム", "ログイン", "サインアップ"]
+menu = ["ホーム", "ログイン", "新規大会登録"]
 choice = st.sidebar.selectbox("メニュー", menu)
 
 if choice == "ホーム":
