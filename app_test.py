@@ -9,7 +9,7 @@ import pandas as pd
 def main():
     status_area = st.empty()
 #タイトル
-st.title('問題発見と解決テストサイト　ログインページにしたい') 
+st.title('問題発見と解決テストサイト') 
 
 #CSVファイル読み込み
 #import pandas as pd
@@ -21,6 +21,8 @@ st.title('問題発見と解決テストサイト　ログインページにし�
 st.link_button('新規作成',"https://monketsu-2ndpage.streamlit.app/",use_container_width=True)
 st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
 st.button('送信')
+
+#ログインについて
 
 #######トップページ終わり
 
