@@ -40,7 +40,34 @@ def check_hashes(password,hashed_text):
 
 #機能の追加
 
+menu = ["ホーム", "ログイン", "サインアップ"]
+choice = st.sidebar.selectbox("メニュー", menu)
 
+if choice == "ホーム":
+st.subheader("ホーム画面です")
+elif choice == "ログイン":
+st.subheader("ログイン画面です")
+
+username = st.sidebar.text_input("ユーザー名を入力してください")
+password = st.sidebar.text_input("パスワードを入力してください", type='password')
+if st.sidebar.checkbox("ログイン"):
+    hashed_pswd = make_hashes(password)
+    result = login_user(username, check_hashes(password, hashed_pswd))
+    if result:
+	st.success("{}さんでログインしました".format(username))
+    else:
+	st.warning("ユーザー名かパスワードが間違っています")
+
+elif choice == "サインアップ":
+st.subheader("新しいアカウントを作成します")
+new_user = st.text_input("ユーザー名を入力してください")
+new_password = st.text_input("パスワードを入力してください", type='password')
+
+if st.button("サインアップ"):
+    create_user()
+    add_user(new_user, make_hashes(new_password))
+    st.success("アカウントの作成に成功しました")
+    st.info("ログイン画面からログインしてください")
 
 
 #######トップページ終わり
