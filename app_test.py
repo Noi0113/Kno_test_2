@@ -23,6 +23,7 @@ st.button('対戦表の確認',use_container_width=True,help='ページ準備中
 st.button('送信')
 
 #ログインについて
+#st.link_button()
 
 #######トップページ終わり
 
