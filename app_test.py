@@ -53,8 +53,8 @@ elif choice == "ログイン":
 	if st.sidebar.checkbox("ログイン"):
 		hashed_pswd = make_hashes(password)
 		result = login_user(username, check_hashes(password, hashed_pswd))
-    		if result:
-	    		st.success("{}さんでログインしました".format(username))
+		if result:
+			st.success("{}さんでログインしました".format(username))
     		else:
 	    		st.warning("ユーザー名かパスワードが間違っています")
 
