@@ -66,7 +66,19 @@ menu1 = ["大会ログイン", "新規大会登録" ]
 choice1 = st.selectbox("選択してください",menu1)
 st.write("{}ページです".format(choice1))
 
+if choice1 == "大会ログイン":
+	username1 == st.text_input("大会名を入力")
+	password1 == st.text_input("大会パスワードを入力してください",type='password1')
+	if st.button('ログイン'):
+		hashed_pswd = mke_hashes(password1)
+		result1 = login_user(username,check_hashes(password,hashed_pswd))
+		if result1:
+			st.success("大会名：{}でログインしました".format(username))
+		else:
+			st.warning("大会名か大会パスワードが間違っています")
 
+elif choice1 == "新規大会登録":
+	
 
 menu = ["ホーム", "大会ログイン", "新規大会登録"]
 choice = st.sidebar.selectbox("メニュー", menu)
