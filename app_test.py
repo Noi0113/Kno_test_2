@@ -15,7 +15,7 @@ def add_user(username, password):
     c.execute('SELECT * FROM userstable WHERE username = ?', (username,))
     existing_user = c.fetchone()
     if existing_user:
-        st.warning("そのユーザー名は既に使用されています")
+        st.warning("その大会名は既に使用されています")
     else:
         c.execute('INSERT INTO userstable (username, password) VALUES (?, ?)', (username, password))
         conn.commit()
@@ -24,6 +24,19 @@ def login_user(username, password):
     c.execute('SELECT * FROM userstable WHERE username = ? AND password = ?', (username, password))
     data = c.fetchall()
     return data
+
+#sqliteに接続
+conn = sqlite3.connect('user_database.db')
+c=conn.cursor()
+
+#パスワードのハッシュ化
+def make_hashes(password):
+	return hashlib.sha256(str.encode(password)).hexdigest()
+
+def check_hashes(password,hashed_text):
+	if make_hashes(password) == hashed_text:
+		return hashed_text
+	return False
 #ここまでログイン機能について
 
 def main():
@@ -45,19 +58,6 @@ st.button('送信')
 ##ログインについて
 #st.link_button()を導入したい
 
-#sqliteに接続
-conn = sqlite3.connect('user_database.db')
-c=conn.cursor()
-
-#パスワードのハッシュ化
-def make_hashes(password):
-	return hashlib.sha256(str.encode(password)).hexdigest()
-
-def check_hashes(password,hashed_text):
-	if make_hashes(password) == hashed_text:
-		return hashed_text
-	return False
-
 #機能の追加
 
 menu = ["ホーム", "ログイン", "サインアップ"]
@@ -68,25 +68,25 @@ if choice == "ホーム":
 elif choice == "ログイン":
 	st.subheader("ログイン画面です")
 
-	username = st.sidebar.text_input("ユーザー名を入力してください")
-	password = st.sidebar.text_input("パスワードを入力してください", type='password')
+	username = st.sidebar.text_input("大会名を入力してください")
+	password = st.sidebar.text_input("大会パスワードを入力してください", type='password')
 	if st.sidebar.checkbox("ログイン"):
 		hashed_pswd = make_hashes(password)
 		result = login_user(username, check_hashes(password, hashed_pswd))
 		if result:
-			st.success("{}さんでログインしました".format(username))
+			st.success("{}大会でログインしました".format(username))
 		else:
-	    		st.warning("ユーザー名かパスワードが間違っています")
+	    		st.warning("大会名か大会パスワードが間違っています")
 
-elif choice == "サインアップ":
-	st.subheader("新しいアカウントを作成します")
-	new_user = st.text_input("ユーザー名を入力してください")
-	new_password = st.text_input("パスワードを入力してください", type='password')
+elif choice == "新規大会登録":
+	st.subheader("新しい大会を作成します")
+	new_user = st.text_input("大会名を入力してください（被りがあると注意されます）")
+	new_password = st.text_input("大会パスワードを入力してください", type='password')
 
-	if st.button("サインアップ"):
+	if st.button("新規大会登録"):
     		create_user()
     		add_user(new_user, make_hashes(new_password))
-    		st.success("アカウントの作成に成功しました")
+    		st.success("新しい大会の作成に成功しました")
     		st.info("ログイン画面からログインしてください")
 
 
