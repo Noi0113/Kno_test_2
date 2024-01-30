@@ -60,13 +60,13 @@ st.button('送信')
 
 #機能の追加
 
-menu = ["ホーム", "ログイン", "新規大会登録"]
+menu = ["ホーム", "大会ログイン", "新規大会登録"]
 choice = st.sidebar.selectbox("メニュー", menu)
 
 if choice == "ホーム":
 	st.subheader("ホーム画面です")
-elif choice == "ログイン":
-	st.subheader("ログイン画面です")
+elif choice == "大会ログイン":
+	st.subheader("大会ログイン画面です")
 
 	username = st.sidebar.text_input("大会名を入力してください")
 	password = st.sidebar.text_input("大会パスワードを入力してください", type='password')
@@ -83,11 +83,11 @@ elif choice == "新規大会登録":
 	new_user = st.text_input("大会名を入力してください（被りがあると注意されます）")
 	new_password = st.text_input("大会パスワードを入力してください", type='password')
 
-	if st.button("新規大会登録"):
+	if st.button("登録"):
     		create_user()
     		add_user(new_user, make_hashes(new_password))
     		st.success("新しい大会の作成に成功しました")
-    		st.info("ログイン画面からログインしてください")
+    		st.info("大会ログイン画面からログインしてください")
 
 
 #######トップページ終わり
