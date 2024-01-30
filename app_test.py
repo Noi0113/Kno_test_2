@@ -11,9 +11,9 @@ st.title('問題発見と解決テストサイト')
 
 
 #ボタン
-st.link_button('新規作成',"https://monketsu-2ndpage.streamlit.app/",use_container_width=True)
+st.button('新規作成',use_container_width=True,help='ページ準備中')
 st.button('アンケート回答',use_container_width=True,help='ページ準備中')
-st.button('対戦表の確認',use_container_width=True,help='ページ準備中')
+st.link_button('対戦表の確認',"https://monketsu-2ndpage.streamlit.app/",use_container_width=True)
 
 
 ##ログインについて
