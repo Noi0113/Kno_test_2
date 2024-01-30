@@ -61,6 +61,13 @@ st.button('送信')
 
 #機能の追加
 
+# セレクトボックスの作成
+menu1 = st.selectbox("選択してください", ["大会ログイン", "新規大会登録" ])
+
+# 選択されたオプションの表示
+st.write(menu1)
+
+
 menu = ["ホーム", "大会ログイン", "新規大会登録"]
 choice = st.sidebar.selectbox("メニュー", menu)
 
