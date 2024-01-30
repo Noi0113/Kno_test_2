@@ -44,9 +44,9 @@ menu = ["ホーム", "ログイン", "サインアップ"]
 choice = st.sidebar.selectbox("メニュー", menu)
 
 if choice == "ホーム":
-st.subheader("ホーム画面です")
+	st.subheader("ホーム画面です")
 elif choice == "ログイン":
-st.subheader("ログイン画面です")
+	st.subheader("ログイン画面です")
 
 username = st.sidebar.text_input("ユーザー名を入力してください")
 password = st.sidebar.text_input("パスワードを入力してください", type='password')
