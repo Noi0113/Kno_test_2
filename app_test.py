@@ -1,6 +1,9 @@
 import streamlit as st
 
 #######トップページ
+
+import hashlib
+
 def main():
     status_area = st.empty()
 #タイトル
