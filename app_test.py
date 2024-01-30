@@ -1,12 +1,13 @@
 import streamlit as st
-
-#######トップページ
-
 import sqlite3
 import hashlib
 import pandas as pd
 
 #ここからログイン機能について必要な定義
+#sqliteに接続
+conn = sqlite3.connect('user_database.db')
+c=conn.cursor()
+
 def create_user():
     c.execute('CREATE TABLE IF NOT EXISTS userstable (username TEXT PRIMARY KEY, password TEXT)')
 
@@ -15,19 +16,16 @@ def add_user(username, password):
     c.execute('SELECT * FROM userstable WHERE username = ?', (username,))
     existing_user = c.fetchone()
     if existing_user:
-        st.warning("その大会名は既に使用されています")
+        return True
     else:
         c.execute('INSERT INTO userstable (username, password) VALUES (?, ?)', (username, password))
         conn.commit()
+	return False
 
 def login_user(username, password):
     c.execute('SELECT * FROM userstable WHERE username = ? AND password = ?', (username, password))
     data = c.fetchall()
     return data
-
-#sqliteに接続
-conn = sqlite3.connect('user_database.db')
-c=conn.cursor()
 
 #パスワードのハッシュ化
 def make_hashes(password):
@@ -81,15 +79,12 @@ elif choice == "新規大会登録":
 	new_user = st.text_input("大会名を入力してください（被りがあると注意されて新規作成できない予定）")
 	new_password = st.text_input("大会パスワードを入力してください",type='password')
 	if st.button("登録"):
-		past_user = add_user(new_user,make_hashes(new_password))
-		if past_user:
-
+		if add_user(new_user,make_hashes(new_password)):
+			st.warning("その大会名は既にしようされています")
 		else:
 			create_user()
 			st.success("新しい大会の作成に成功しました")
 			st.info("大会ログイン画面からログインしてください")
-#---------------------------------------------------------------------------
-
 
 
 #######トップページ終わり
