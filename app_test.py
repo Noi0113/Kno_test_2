@@ -70,7 +70,7 @@ if choice1 == "大会ログイン":
 	username1 = st.text_input("大会名を入力")
 	password1 = st.text_input("大会パスワードを入力してください",type='password')
 	if st.button('ログイン'):
-		hashed_pswd1 = mke_hashes(password1)
+		hashed_pswd1 = make_hashes(password1)
 		result1 = login_user(username,check_hashes(password1,hashed_pswd1))
 		if result1:
 			st.success("大会名：{}でログインしました".format(username1))
