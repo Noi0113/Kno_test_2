@@ -54,9 +54,9 @@ if st.sidebar.checkbox("ログイン"):
     hashed_pswd = make_hashes(password)
     result = login_user(username, check_hashes(password, hashed_pswd))
     if result:
-	st.success("{}さんでログインしました".format(username))
+	    st.success("{}さんでログインしました".format(username))
     else:
-	st.warning("ユーザー名かパスワードが間違っています")
+	    st.warning("ユーザー名かパスワードが間違っています")
 
 elif choice == "サインアップ":
 st.subheader("新しいアカウントを作成します")
