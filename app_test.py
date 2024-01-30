@@ -18,8 +18,8 @@ def add_user(username, password):
     if existing_user:
         return True
     else:
-        c.execute('INSERT INTO userstable (username, password) VALUES (?, ?)', (username, password))
-        conn.commit()
+	    c.execute('INSERT INTO userstable (username, password) VALUES (?, ?)', (username, password))
+	    conn.commit()
 	    return False
 
 def login_user(username, password):
