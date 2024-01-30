@@ -1,0 +1,43 @@
+import sqlite3
+
+# SQLiteデータベースに接続
+conn = sqlite3.connect('test.db')
+cursor = conn.cursor()
+
+# テーブルの作成
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS survey_data (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        school TEXT,
+        clas TEXT,
+        kisuu TINYINT(1)
+        wantto TEXT,
+        wantnotto TEXT,
+        os TINYINT(1)
+    )
+''')
+conn.commit()
+conn.close()
+
+st.title('アンケートフォーム')
+
+# フォームの作成
+name = st.text_input('名前:')
+school = st.number_input('学校名、所属会名:')
+clas = st.text_input('級:')
+kisuu = st.text_input('奇数の場合、一人取りまたは読手を希望する:')
+wantto = st.text_input('対戦希望:')
+wantnotto = st.text_input('対戦拒否希望:')
+os = st.text_input('一試合目参加可否:')
+
+if st.button('送信'):
+    # データベースにデータを挿入
+    cursor.execute('''
+        INSERT INTO survey_data (name,school,clas,kisuu,wantto,wantnotto,os) VALUES (?, ?,　?,　?,　?,　?,　?)
+    ''', (name,school,clas,kisuu,wantto,wantnotto,os))
+    conn.commit()
+    st.success('アンケートが送信されました!')
+
+# データベース接続を閉じる
+conn.close()
