@@ -16,8 +16,7 @@ st.link_button('アンケート回答',"https://monketsu-questionnaire.streamlit
 st.link_button('対戦表の確認',"https://monketsu-2ndpage.streamlit.app/",use_container_width=True)
 
 st.subheader('このサイトの使い方')
-st.markdown('1：新規作成')
-st.markdown('大会主催者は大会IDとパスワードを作成し、参加者に共有してください')
+st.markdown('1：新規作成\n大会主催者は大会IDとパスワードを作成し、参加者に共有してください')
 st.markdown('2:アンケート回答')
 st.markdown('大会参加者は大会IDとパスワードでログインし、個人の情報を入力してください')
 st.markdown('3:対戦表の確認')
