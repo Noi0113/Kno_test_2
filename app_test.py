@@ -7,7 +7,7 @@ import pandas as pd
 def main():
     status_area = st.empty()
 #タイトル
-st.title('問題発見と解決テストサイト　かるたの対戦最適化') 
+st.title('競技かるた　対戦表作成サイト') 
 
 
 #ボタン
@@ -15,10 +15,8 @@ st.link_button('新規作成',"https://monketsu-newcreate.streamlit.app/",use_co
 st.link_button('アンケート回答',"https://monketsu-questionnaire.streamlit.app/",use_container_width=True)
 st.link_button('対戦表の確認',"https://monketsu-2ndpage.streamlit.app/",use_container_width=True)
 
-
-##ログインについて
-#st.link_button()を導入したい
-
+st.markdown('1
+            新規作成をします')
 
 #######トップページ終わり
 
