@@ -8,7 +8,7 @@ def main():
     status_area = st.empty()
 #タイトル
 st.title('競技かるた　対戦表作成サイト') 
-st,markdown('') #空行の作成
+st.markdown('') #空行の作成
 
 st.subheader('このサイトの使い方')
 st.markdown('①新規作成')
