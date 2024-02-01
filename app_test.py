@@ -7,7 +7,7 @@ import pandas as pd
 def main():
     status_area = st.empty()
 #タイトル
-st.title('問題発見と解決テストサイト') 
+st.title('問題発見と解決テストサイト　かるたの対戦最適化') 
 
 
 #ボタン
