@@ -8,6 +8,7 @@ def main():
     status_area = st.empty()
 #タイトル
 st.title('競技かるた　対戦表作成サイト') 
+st,markdown('') #空行の作成
 
 st.subheader('このサイトの使い方')
 st.markdown('①新規作成')
@@ -17,7 +18,7 @@ st.markdown('大会参加者は大会IDとパスワードでログインし、�
 st.markdown('③対戦表の確認')
 st.markdown('個人アンケートの入力終了後、大会参加者は大会IDとパスワードを入力してください')
 st.markdown('対戦表が確認できます')
-
+st.markdown('') #空行の作成
 #ボタン
 st.link_button('新規作成',"https://monketsu-newcreate.streamlit.app/",use_container_width=True)
 st.link_button('アンケート回答',"https://monketsu-questionnaire.streamlit.app/",use_container_width=True)
