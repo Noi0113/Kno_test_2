@@ -10,11 +10,11 @@ def main():
 st.title('競技かるた　対戦表作成サイト') 
 
 st.subheader('このサイトの使い方')
-st.markdown('1：新規作成')
+st.markdown('①新規作成')
 st.markdown('大会主催者は大会IDとパスワードを作成し、参加者に共有してください')
-st.markdown('2:アンケート回答')
+st.markdown('②アンケート回答')
 st.markdown('大会参加者は大会IDとパスワードでログインし、個人の情報を入力してください')
-st.markdown('3:対戦表の確認')
+st.markdown('③対戦表の確認')
 st.markdown('個人アンケートの入力終了後、大会参加者は大会IDとパスワードを入力してください')
 st.markdown('対戦表が確認できます')
 
