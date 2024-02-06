@@ -22,7 +22,7 @@ st.markdown('') #空行の作成
 #ボタン
 st.link_button('新規作成',"https://monketsu-newcreate.streamlit.app/",use_container_width=True)
 st.link_button('アンケート回答',"https://monketsu-questionnaire.streamlit.app/",use_container_width=True)
-st.link_button('対戦表の確認',"https://monketsu-2ndpage.streamlit.app/",use_container_width=True)
+st.link_button('対戦表の確認',"https://monketsu-2ndpage2.streamlit.app/",use_container_width=True)
 
 
 
