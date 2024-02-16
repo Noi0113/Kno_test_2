@@ -1,13 +1,10 @@
 import streamlit as st
-import sqlite3
-import hashlib
-import pandas as pd
 
 #ここからサイトの構造
 def main():
     status_area = st.empty()
 #タイトル
-    st.title('競技かるた　対戦表作成サイト') 
+    st.title('競技かるた　対戦表作成サイト！！') 
     st.markdown('') #空行の作成
 
     st.subheader('このサイトの使い方')
