@@ -21,7 +21,7 @@ def main():
     st.markdown('③対戦表の確認')
     st.markdown('大会主催者が、大会参加者がアンケートを入力した後に大会名とパスワードを入力することで')
     st.markdown('対戦表が確認できます')
-    st.link_button('対戦表の確認',"https://monketsu-2ndpage.streamlit.app/",use_container_width=True)
+    st.link_button('対戦表の確認',"https://monketsu-taisen-saitekika.streamlit.app/",use_container_width=True)
     st.markdown('') #空行の作成
 #ボタン
 
